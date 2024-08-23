@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartRay - Revolutionizing Driving Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E5D6A4;
+            color: #333;
+        }
+        header {
+            background-color: #2D2D2F;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        section {
+        padding: 160px 20px 80px; /* מרחב אנכי נוסף למעלה ולמטה */
+        max-width: 1000px;
+        margin: auto;
+        padding-top: 180px; /* Offset to avoid header overlap */
+        margin-top: -80px; /* Compensate for the added padding */
+    }
+
+    #vision {
+        padding-top: 350px; /* להגדיל את המרחב מעל הויז'ן */
+        padding-bottom: 350px; /* להגדיל את המרחב מתחת לויז'ן */
+    }
+
+    
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #003f5c;
+        }
+        .section-content {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        .value-proposition, .features, .markets {
+            background-color: #E5D6A4;
+            margin-bottom: 130px;
+            padding: 30px;
+            border-radius: 0px;
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2D2D2F;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HeartRay</h1>
+    <nav>
+        <a href="#vision">Vision</a>
+        <a href="#value-proposition">Value Proposition</a>
+        <a href="#features">Features</a>
+        <a href="#markets">Markets</a>
+    </nav>
+</header>
+
+<section id="vision">
+    <div class="section-title">Our Vision</div>
+    <div class="section-content">
+        <p>HeartRay redefines the driving experience through cutting-edge technology, seamlessly integrating automotive safety, comfort, and health with precise contact-free physiological measurements.</p>
+    </div>
+</section>
+
+<section id="value-proposition" class="value-proposition">
+    <div class="section-title">Value Proposition</div>
+    <div class="section-content">
+         <img src="valueProposition.png" alt="Market Image" style="width:100%; max-width:800px; display:block; margin:auto;">
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="section-title">Features</div>
+    <div class="section-content">
+        <img src="features.png" alt="Market Image" style="width:100%; max-width:800px; display:block; margin:auto;">
+    </div>
+</section>
+
+<section id="markets" class="markets">
+    <div class="section-title">Potential Markets</div>
+    <div class="section-content">
+        <img src="market.png" alt="Market Image" style="width:100%; max-width:1000px; display:block; margin:auto;">
+        
+    </div>
+</section>
+
+<footer>
+     contact us :    info@heart-ray.com 
+</footer>
+
+<script>
+    // Smooth scrolling with offset
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            const headerOffset = 200; // adjust this value according to the height of the header
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

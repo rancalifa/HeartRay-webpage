@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeartRay - Revolutionizing Driving Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #003f5c;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        section {
+            padding: 100px 20px 60px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #003f5c;
+        }
+        .section-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .value-proposition, .features, .markets {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #003f5c;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HeartRay</h1>
+    <nav>
+        <a href="#vision">Vision</a>
+        <a href="#value-proposition">Value Proposition</a>
+        <a href="#features">Features</a>
+        <a href="#markets">Markets</a>
+    </nav>
+</header>
+
+<section id="vision">
+    <div class="section-title">Our Vision</div>
+    <div class="section-content">
+        HeartRay redefines the driving experience through cutting-edge technology, seamlessly integrating automotive safety, comfort, and health with precise contact-free physiological measurements.
+    </div>
+</section>
+
+<section id="value-proposition" class="value-proposition">
+    <div class="section-title">Value Proposition</div>
+    <div class="section-content">
+        <ul>
+            <li>Cutting-edge technology delivering precise medical-grade physiological measurements</li>
+            <li>Diverse physiological data collection enabling a comprehensive understanding of the individual's condition</li>
+            <li>Seamless integration with any Driver Monitoring System (DMS), compatible with both RGB and IR cameras</li>
+        </ul>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <div class="section-title">Features</div>
+    <div class="section-content">
+        <ul>
+            <li>Fatigue detection</li>
+            <li>Stress level monitoring</li>
+            <li>Thermal comfort optimization</li>
+            <li>Cognitive stress detection</li>
+            <li>Motion sickness detection and mitigation</li>
+            <li>Key health indicator tracking (Arrhythmia, Tachy/Bradycardia)</li>
+        </ul>
+    </div>
+</section>
+
+<section id="markets" class="markets">
+    <div class="section-title">Potential Markets</div>
+    <div class="section-content">
+        <ul>
+            <li>OEMs & Tier-1 suppliers</li>
+            <li>Fleet management</li>
+            <li>After-market solutions</li>
+            <li>Off-highway vehicles (e.g., aviation, trains, scooters)</li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    &copy; 2024 HeartRay. All rights reserved.
+</footer>
+
+<script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

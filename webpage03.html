@@ -11,11 +11,12 @@
             padding: 0;
             background-color: #E5D6A4;
             color: #333;
+            height: 100%;
         }
         header {
-            background-color: #3D2D2F;
+            background-color: #2D2D2F;
             color: white;
-            padding: 0px 0;
+            padding: 20px 0;
             text-align: center;
             position: fixed;
             width: 100%;
@@ -23,33 +24,42 @@
             z-index: 1000;
         }
         header h1 {
-            margin: 0px;
+            margin: 0;
             font-size: 2em;
         }
         nav {
-            margin: 0px 0;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 10px 0;
         }
         nav a {
-            margin: 0 px;
+            display: inline-block;
+            margin: 0 10px;
             color: white;
             text-decoration: none;
             font-size: 1.2em;
+            padding: 10px 15px;
+            flex-shrink: 0;
         }
         section {
-        padding: 160px 20px 80px; /* מרחב אנכי נוסף למעלה ולמטה */
-        max-width: 1000px;
-        margin: auto;
-        padding-top: 180px; /* Offset to avoid header overlap */
-        margin-top: -80px; /* Compensate for the added padding */
-    }
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* מרכז את התוכן אופקית ואנכית */
+            padding: 0 20px;
+            max-width: 1000px;
+            margin: auto;
+            min-height: calc(100vh - 200px); /* מחשב גובה של 100vh פחות גובה ה-header */
+            box-sizing: border-box;
+            text-align: center; /* טקסט מיושר למרכז */
+        }
 
-    #vision {
-        padding-top: 350px; /* להגדיל את המרחב מעל הויז'ן */
-        padding-bottom: 350px; /* להגדיל את המרחב מתחת לויז'ן */
-    }
+        #vision {
+            padding-top: 180px; /* להתחשב בגובה ה-header */
+        }
 
-    
         .section-title {
             font-size: 2em;
             margin-bottom: 20px;
@@ -58,10 +68,10 @@
         .section-content {
             font-size: 1.2em;
             line-height: 1.8;
+            max-width: 800px; /* מקסימום רוחב תוכן */
         }
         .value-proposition, .features, .markets {
             background-color: #E5D6A4;
-            margin-bottom: 130px;
             padding: 30px;
             border-radius: 0px;
             box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
@@ -75,50 +85,80 @@
             width: 100%;
             bottom: 0;
         }
+
+        /* Media Queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+            nav a {
+                font-size: 1em;
+                padding: 5px 10px;
+            }
+            #vision {
+                padding-top: 200px;
+            }
+            .section-title {
+                font-size: 1.8em;
+            }
+            .section-content {
+                font-size: 1em;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+            nav {
+                padding: 10px 0;
+            }
+            nav a {
+                font-size: 0.9em;
+                padding: 5px 10px;
+            }
+            #vision {
+                padding-top: 220px; /* להתחשב בגובה ה-header */
+            }
+            .section-title {
+                font-size: 1.6em;
+            }
+            .section-content {
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
-<img src="heartrayLogo.png" alt="HeartRay Logo" style="height: 180px; display: block; margin: 0 auto;">
+    <h1>HeartRay</h1>
     <nav>
-        <a href="#vision"></a>
-        <a href="#value-proposition"></a>
-        <a href="#features"></a>
-		<a href="#bio-parameters"></a>
-        <a href="#markets"></a>
+        <a href="#vision">Vision</a>
+        <a href="#value-proposition">Value Proposition</a>
+        <a href="#features">Features</a>
+        <a href="#markets">Markets</a>
     </nav>
 </header>
 
 <section id="vision">
     <div class="section-title">Our Vision</div>
     <div class="section-content">
-        <p>HeartRay redefines the driving experience by seamlessly integrating advanced, medical-grade physiological measurement technology with driver monitoring systems. Powered by machine learning, our contact-free technology enhances automotive safety, comfort, and health, setting new standards for precision and reliability.</p>
+        <p>HeartRay redefines the driving experience through cutting-edge technology, seamlessly integrating automotive safety, comfort, and health with precise contact-free physiological measurements.</p>
     </div>
 </section>
 
 <section id="value-proposition" class="value-proposition">
     <div class="section-title">Value Proposition</div>
     <div class="section-content">
-         <p>Seamless integration with any Driver monitoring system (DMS).</p>
-		 <p>Precise medical grade measurements.</p>
-		 <p>Enabling an understanding of the individual's condition.</p>
+         <img src="ValueProposition.png" alt="Market Image" style="width:100%; max-width:800px; display:block; margin:auto;">
     </div>
 </section>
-
-<br><br><br><br>
 
 <section id="features" class="features">
     <div class="section-title">Features</div>
     <div class="section-content">
         <img src="features.png" alt="Market Image" style="width:100%; max-width:800px; display:block; margin:auto;">
-    </div>
-</section>
-
-<section id="bio-parameters" class="bio-parameters">
-    <div class="section-title">bio-parameters</div>
-    <div class="section-content">
-        <img src="bio_parameters.png" alt="Market Image" style="width:90%; max-width:800px; display:block; margin:auto;">
     </div>
 </section>
 
@@ -146,12 +186,4 @@
             const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
             window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
-
-</body>
-</html>
+           
